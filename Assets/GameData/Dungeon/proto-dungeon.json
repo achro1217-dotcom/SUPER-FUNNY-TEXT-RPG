@@ -1,0 +1,1641 @@
+{
+  "Width": 10,
+  "Height": 40,
+  "Cells": {
+    "$type": "System.Collections.Generic.List`1[[DungeonCellData, Assembly-CSharp]], mscorlib",
+    "$values": [
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonStartCellData, Assembly-CSharp",
+        "CellType": 7
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEscapeAnchorCellData, Assembly-CSharp",
+        "CellType": 8
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEncounterCellData, Assembly-CSharp",
+        "EncounterDefId": "encounter.default",
+        "Tier": 0,
+        "IsMobile": false,
+        "CellType": 2
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEncounterCellData, Assembly-CSharp",
+        "EncounterDefId": "encounter.default",
+        "Tier": 0,
+        "IsMobile": false,
+        "CellType": 2
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonLootCellData, Assembly-CSharp",
+        "LootDefId": "loot.default",
+        "LootTier": 0,
+        "RequiresEliteClear": false,
+        "CellType": 3
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEncounterCellData, Assembly-CSharp",
+        "EncounterDefId": "encounter.default",
+        "Tier": 0,
+        "IsMobile": false,
+        "CellType": 2
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonLootCellData, Assembly-CSharp",
+        "LootDefId": "loot.default",
+        "LootTier": 0,
+        "RequiresEliteClear": false,
+        "CellType": 3
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEncounterCellData, Assembly-CSharp",
+        "EncounterDefId": "encounter.default",
+        "Tier": 0,
+        "IsMobile": false,
+        "CellType": 2
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonRestCellData, Assembly-CSharp",
+        "RestDefId": "rest.default",
+        "CellType": 5
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonLootCellData, Assembly-CSharp",
+        "LootDefId": "loot.default",
+        "LootTier": 0,
+        "RequiresEliteClear": false,
+        "CellType": 3
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEncounterCellData, Assembly-CSharp",
+        "EncounterDefId": "encounter.default",
+        "Tier": 0,
+        "IsMobile": false,
+        "CellType": 2
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEncounterCellData, Assembly-CSharp",
+        "EncounterDefId": "encounter.default",
+        "Tier": 0,
+        "IsMobile": false,
+        "CellType": 2
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonRestCellData, Assembly-CSharp",
+        "RestDefId": "rest.default",
+        "CellType": 5
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonEmptyCellData, Assembly-CSharp",
+        "CellType": 0
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonLootCellData, Assembly-CSharp",
+        "LootDefId": "loot.default",
+        "LootTier": 0,
+        "RequiresEliteClear": false,
+        "CellType": 3
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonEscapeAnchorCellData, Assembly-CSharp",
+        "CellType": 8
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      },
+      {
+        "$type": "DungeonWallCellData, Assembly-CSharp",
+        "CellType": 1
+      }
+    ]
+  }
+}
