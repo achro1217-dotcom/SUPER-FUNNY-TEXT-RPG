@@ -1,0 +1,47 @@
+[
+  {
+    "Id": "bind_enter_dungeon_01",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_01"
+  },
+  {
+    "Id": "bind_enter_dungeon_02",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_02"
+  },
+  {
+    "Id": "bind_enter_dungeon_03",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_03"
+  },
+  {
+    "Id": "bind_enter_dungeon_04",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_04"
+  },
+  {
+    "Id": "bind_enter_dungeon_05",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_05"
+  },
+  {
+    "Id": "bind_enter_dungeon_06",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_06"
+  },
+  {
+    "Id": "bind_enter_dungeon_07",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_07"
+  },
+  {
+    "Id": "bind_enter_dungeon_08",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_08"
+  },
+  {
+    "Id": "bind_enter_dungeon_09",
+    "TriggerType": 0,
+    "TextLineId": "enter_dungeon_09"
+  }
+]

@@ -56,8 +56,9 @@ public readonly struct DungeonPoint : IEquatable<DungeonPoint>
 public enum DungeonFogState
 {
     Unknown = 0,
-    Explored = 1,
-    Visible = 2,
+    Invisible = 1,
+    Explored = 2,
+    Visible = 3,
 }
 
 public enum DungeonCellType

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
 public sealed class PrototypeDungeonSceneController : MonoBehaviour
@@ -8,15 +7,23 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
     [SerializeField] private PrototypeDungeonView _dungeonView;
     [SerializeField] private PrototypeDungeonEntityView _entityView;
     [SerializeField] private Camera _inputCamera;
-    [SerializeField] private string _defaultDungeonJsonPath = "GameData/Dungeon/proto-dungeon.json";
+    [SerializeField] private string _defaultDungeonJsonPath = "Dungeon/proto-dungeon";
     [SerializeField] private bool _loadOnStart = true;
 
     public DungeonSessionData CurrentSession { get; private set; }
     public DungeonPoint PlayerPoint { get; private set; }
     public int TurnCount { get; private set; }
+    public string LastDirectedText { get; private set; }
+
+    private DataManager _dataManager;
+    private TextLineSelectionCoordinator _textCoordinator;
+    private int _stepsSinceText;
+    private bool _lastMoveWasBacktrack;
 
     private void Start()
     {
+        EnsureTextSystems();
+
         if (_loadOnStart)
         {
             LoadDefaultSession();
@@ -47,6 +54,7 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
 
         TurnCount++;
         RecalculateFog();
+        TryDirectText();
         RenderSession();
     }
 
@@ -55,26 +63,21 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
         LoadSessionFromJsonPath(_defaultDungeonJsonPath);
     }
 
-    public void LoadSessionFromJsonPath(string relativeJsonPath)
+    public void LoadSessionFromJsonPath(string resourcePath)
     {
-        if (string.IsNullOrWhiteSpace(relativeJsonPath))
+        if (string.IsNullOrWhiteSpace(resourcePath))
         {
-            throw new ArgumentException("Json path is required.", nameof(relativeJsonPath));
+            throw new ArgumentException("Resource path is required.", nameof(resourcePath));
         }
 
         EnsureView();
-        string normalizedPath = relativeJsonPath.Replace('\\', '/');
-        string assetRelativePath = normalizedPath.StartsWith("Assets/", StringComparison.OrdinalIgnoreCase)
-            ? normalizedPath
-            : $"Assets/{normalizedPath}";
-
-        string fullPath = Path.Combine(Directory.GetCurrentDirectory(), assetRelativePath);
-        if (!File.Exists(fullPath))
+        TextAsset dungeonJsonAsset = Resources.Load<TextAsset>(resourcePath);
+        if (dungeonJsonAsset == null)
         {
-            throw new FileNotFoundException($"Dungeon json file not found: {assetRelativePath}", fullPath);
+            throw new InvalidOperationException($"Dungeon json resource not found. path=Assets/**/Resources/{resourcePath}.json");
         }
 
-        DungeonMapData mapData = DungeonMapDataJsonSerializer.LoadFromFile(fullPath);
+        DungeonMapData mapData = DungeonMapDataJsonSerializer.FromJson(dungeonJsonAsset.text);
         LoadSession(CreateSessionFromMap(mapData));
     }
 
@@ -89,8 +92,12 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
         CurrentSession = sessionData;
         PlayerPoint = FindStartPointOrCenter(CurrentSession.StaticMap);
         TurnCount = 0;
+        _stepsSinceText = 0;
+        _lastMoveWasBacktrack = false;
+        LastDirectedText = null;
         ResetFogToUnknown();
         RecalculateFog();
+        TryDirectText(TextTriggerType.DungeonEnter);
         RenderSession();
     }
 
@@ -223,8 +230,126 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
             return false;
         }
 
+        _lastMoveWasBacktrack = CurrentSession.RuntimeMap.Cells[index].FogState != DungeonFogState.Unknown;
         PlayerPoint = nextPoint;
         return true;
+    }
+
+    private void EnsureTextSystems()
+    {
+        if (_textCoordinator != null)
+        {
+            return;
+        }
+
+        _dataManager = new DataManager();
+        _textCoordinator = new TextLineSelectionCoordinator(
+            _dataManager.TextLines.TextLines,
+            _dataManager.TextTriggerBindings.Bindings);
+    }
+
+    private void TryDirectText(TextTriggerType? triggerType = null)
+    {
+        EnsureTextSystems();
+        if (_textCoordinator == null)
+        {
+            return;
+        }
+
+        TextObservation observation = BuildTextObservation();
+        TextLine selected = _textCoordinator.SelectTextLine(observation, triggerType);
+        if (selected == null)
+        {
+            _stepsSinceText++;
+            return;
+        }
+
+        LastDirectedText = selected.Text;
+        _stepsSinceText = 0;
+        Debug.Log($"[TextDirector] {selected.Text}");
+    }
+
+    private TextObservation BuildTextObservation()
+    {
+        float openRatioRecent = CalculateOpenRatioAroundPlayer();
+        float wallContactRecent = 1f - openRatioRecent;
+        int newTilesRecent = _lastMoveWasBacktrack ? 0 : 1;
+        float backtrackRecent = _lastMoveWasBacktrack ? 1f : 0f;
+
+        return new TextObservation(
+            mentalState: 50,
+            stepsSinceText: _stepsSinceText,
+            openRatioRecent: openRatioRecent,
+            wallContactRecent: wallContactRecent,
+            newTilesRecent: newTilesRecent,
+            backtrackRecent: backtrackRecent,
+            depthNorm: CalculateDepthNorm());
+    }
+
+    private float CalculateOpenRatioAroundPlayer()
+    {
+        int width = CurrentSession.StaticMap.Width;
+        int height = CurrentSession.StaticMap.Height;
+        int walkableCount = 0;
+        int totalCount = 0;
+
+        for (int deltaY = -1; deltaY <= 1; deltaY++)
+        {
+            for (int deltaX = -1; deltaX <= 1; deltaX++)
+            {
+                int x = PlayerPoint.X + deltaX;
+                int y = PlayerPoint.Y + deltaY;
+                if (x < 0 || y < 0 || x >= width || y >= height)
+                {
+                    continue;
+                }
+
+                totalCount++;
+                int index = (y * width) + x;
+                if (CurrentSession.StaticMap.Cells[index].IsWalkable)
+                {
+                    walkableCount++;
+                }
+            }
+        }
+
+        if (totalCount == 0)
+        {
+            return 0f;
+        }
+
+        return (float)walkableCount / totalCount;
+    }
+
+    private float CalculateDepthNorm()
+    {
+        IReadOnlyList<int> distances = CurrentSession.Generation.DistanceMap.Distances;
+        if (distances == null || distances.Count == 0)
+        {
+            return 0f;
+        }
+
+        int maxDistance = 0;
+        for (int i = 0; i < distances.Count; i++)
+        {
+            if (distances[i] > maxDistance)
+            {
+                maxDistance = distances[i];
+            }
+        }
+
+        if (maxDistance <= 0)
+        {
+            return 0f;
+        }
+
+        int currentDistance = distances[PlayerPoint.ToIndex(CurrentSession.StaticMap.Width)];
+        if (currentDistance < 0)
+        {
+            return 0f;
+        }
+
+        return Mathf.Clamp01((float)currentDistance / maxDistance);
     }
 
     private void ResetFogToUnknown()
@@ -249,6 +374,26 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
 
         int width = CurrentSession.StaticMap.Width;
         int height = CurrentSession.StaticMap.Height;
+        for (int deltaY = -2; deltaY <= 2; deltaY++)
+        {
+            for (int deltaX = -2; deltaX <= 2; deltaX++)
+            {
+                int x = PlayerPoint.X + deltaX;
+                int y = PlayerPoint.Y + deltaY;
+                if (x < 0 || y < 0 || x >= width || y >= height)
+                {
+                    continue;
+                }
+
+                var point = new DungeonPoint(x, y);
+                int index = point.ToIndex(width);
+                if (runtimeCells[index].FogState == DungeonFogState.Unknown)
+                {
+                    runtimeCells[index].FogState = DungeonFogState.Invisible;
+                }
+            }
+        }
+
         for (int deltaY = -1; deltaY <= 1; deltaY++)
         {
             for (int deltaX = -1; deltaX <= 1; deltaX++)

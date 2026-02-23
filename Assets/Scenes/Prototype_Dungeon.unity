@@ -576,8 +576,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24857d0ae062c774881741954fd9a174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrototypeDungeonView
-  _wallSprite: {fileID: 21300000, guid: 16d90fbd70958a647a5a2dde25ce5b3c, type: 3}
-  _floorSprite: {fileID: 21300000, guid: 9914625de793ff34088fd9d4b22f6f4e, type: 3}
+  _roomVisibleSprite: {fileID: 21300000, guid: 9914625de793ff34088fd9d4b22f6f4e, type: 3}
+  _roomInvisibleSprite: {fileID: 21300000, guid: b68a5a96c3fe2e847b5249506ec3481e, type: 3}
+  _roomEmptySprite: {fileID: 21300000, guid: 16d90fbd70958a647a5a2dde25ce5b3c, type: 3}
   _imageEnemy: {fileID: 21300000, guid: e69e3fd275b561c43bc3f891d3699c44, type: 3}
   _imageLoot: {fileID: 21300000, guid: d5928d472e56d1849ab8b315237b1ad7, type: 3}
   _imageInformation: {fileID: 21300000, guid: b7f2039858c99ea4485e4a36db4c2486, type: 3}
@@ -599,7 +600,8 @@ Transform:
   m_LocalPosition: {x: 0.9, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1417441666}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &641192036
@@ -709,6 +711,97 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1417441665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417441666}
+  - component: {fileID: 1417441667}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1417441666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417441665}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalScale: {x: 7.3, y: 4.6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 641192035}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1417441667
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417441665}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: 16d90fbd70958a647a5a2dde25ce5b3c, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.19, y: 0.19}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &1723123519
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +834,7 @@ MonoBehaviour:
   _dungeonView: {fileID: 641192034}
   _entityView: {fileID: 641192036}
   _inputCamera: {fileID: 519420031}
-  _defaultDungeonJsonPath: GameData/Dungeon/proto-dungeon.json
+  _defaultDungeonJsonPath: Dungeon/proto-dungeon
   _loadOnStart: 1
 --- !u!4 &1723123521
 Transform:

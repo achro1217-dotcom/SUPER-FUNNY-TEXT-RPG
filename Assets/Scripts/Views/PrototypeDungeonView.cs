@@ -4,11 +4,13 @@ using UnityEngine;
 public sealed class PrototypeDungeonView : MonoBehaviour
 {
     private static readonly Color VisibleColor = Color.white;
-    private static readonly Color ExploredColor = new Color(0.55f, 0.55f, 0.55f, 1f);
-    private static readonly Color UnknownColor = new Color(0.06f, 0.06f, 0.06f, 1f);
+    private static readonly Color UnknownColor = new Color(1f, 1f, 1f, 0f);
+    private static readonly Color ExploredOverlayColor = new Color(32f / 255f, 29f / 255f, 24f / 255f, 1f);
+    private const float ExploredOverlayStrength = 0.4f;
 
-    [SerializeField] private Sprite _wallSprite;
-    [SerializeField] private Sprite _floorSprite;
+    [SerializeField] private Sprite _roomVisibleSprite;
+    [SerializeField] private Sprite _roomInvisibleSprite;
+    [SerializeField] private Sprite _roomEmptySprite;
     [SerializeField] private Sprite _imageEnemy;
     [SerializeField] private Sprite _imageLoot;
     [SerializeField] private Sprite _imageInformation;
@@ -17,7 +19,7 @@ public sealed class PrototypeDungeonView : MonoBehaviour
     [SerializeField] private Sprite _imageEscape;
     [SerializeField] private float _cellSize = 1f;
     [SerializeField] private int _renderWindowWidth = 5;
-    [SerializeField] private int _renderWindowHeight = 8;
+    [SerializeField] private int _renderWindowHeight = 5;
 
     private DungeonMapData _mapData;
     private DungeonMapRuntimeData _runtimeMapData;
@@ -313,16 +315,40 @@ public sealed class PrototypeDungeonView : MonoBehaviour
 
     private GameObject CreateCellInstance(DungeonCellData cell, DungeonFogState fogState)
     {
-        Sprite baseSprite = cell.CellType == DungeonCellType.Wall ? _wallSprite : _floorSprite;
+        Sprite baseSprite = ResolveBaseSprite(cell, fogState);
         GameObject baseInstance = CreateSpriteTileInstance(cell.CellType, baseSprite);
         ApplyFogColor(baseInstance, fogState);
 
-        if (fogState != DungeonFogState.Unknown)
+        if (fogState == DungeonFogState.Visible || fogState == DungeonFogState.Explored)
         {
             AttachOverlayIfNeeded(baseInstance.transform, cell.CellType);
+            if (fogState == DungeonFogState.Explored && cell.IsWalkable && cell.CellType != DungeonCellType.Wall)
+            {
+                ApplyExploredTintToAllRenderers(baseInstance);
+            }
         }
 
         return baseInstance;
+    }
+
+    private Sprite ResolveBaseSprite(DungeonCellData cell, DungeonFogState fogState)
+    {
+        if (cell.CellType == DungeonCellType.Wall || !cell.IsWalkable)
+        {
+            return _roomEmptySprite;
+        }
+
+        if (fogState == DungeonFogState.Invisible)
+        {
+            return _roomInvisibleSprite;
+        }
+
+        if (fogState == DungeonFogState.Visible || fogState == DungeonFogState.Explored)
+        {
+            return _roomVisibleSprite;
+        }
+
+        return _roomInvisibleSprite;
     }
 
     private static void ApplyFogColor(GameObject tileInstance, DungeonFogState fogState)
@@ -335,15 +361,29 @@ public sealed class PrototypeDungeonView : MonoBehaviour
 
         switch (fogState)
         {
+            case DungeonFogState.Unknown:
+                renderer.color = UnknownColor;
+                return;
+            case DungeonFogState.Invisible:
             case DungeonFogState.Visible:
                 renderer.color = VisibleColor;
                 return;
             case DungeonFogState.Explored:
-                renderer.color = ExploredColor;
+                renderer.color = VisibleColor;
                 return;
             default:
-                renderer.color = UnknownColor;
+                renderer.color = VisibleColor;
                 return;
+        }
+    }
+
+    private static void ApplyExploredTintToAllRenderers(GameObject tileInstance)
+    {
+        SpriteRenderer[] renderers = tileInstance.GetComponentsInChildren<SpriteRenderer>(includeInactive: true);
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            SpriteRenderer renderer = renderers[i];
+            renderer.color = Color.Lerp(renderer.color, ExploredOverlayColor, ExploredOverlayStrength);
         }
     }
 
