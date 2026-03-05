@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
 {
     [SerializeField] private PrototypeDungeonView _dungeonView;
     [SerializeField] private PrototypeDungeonEntityView _entityView;
+    [SerializeField] private PrototypeTextView _textView;
     [SerializeField] private Camera _inputCamera;
     [SerializeField] private string _defaultDungeonJsonPath = "Dungeon/proto-dungeon";
     [SerializeField] private bool _loadOnStart = true;
@@ -19,6 +21,8 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
     private TextLineSelectionCoordinator _textCoordinator;
     private int _stepsSinceText;
     private bool _lastMoveWasBacktrack;
+    private bool _isInputBlocked;
+    private Coroutine _textRoutine;
 
     private void Start()
     {
@@ -34,6 +38,17 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
     {
         if (CurrentSession == null)
         {
+            return;
+        }
+
+        if (_isInputBlocked)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            _textView.AppendText($"[Debug] Player at ({PlayerPoint.X}, {PlayerPoint.Y}), Turn {TurnCount}");
             return;
         }
 
@@ -54,8 +69,8 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
 
         TurnCount++;
         RecalculateFog();
-        TryDirectText();
         RenderSession();
+        StartTextRoutine();
     }
 
     public void LoadDefaultSession()
@@ -95,10 +110,11 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
         _stepsSinceText = 0;
         _lastMoveWasBacktrack = false;
         LastDirectedText = null;
+        _textView?.ClearLines();
         ResetFogToUnknown();
         RecalculateFog();
-        TryDirectText(TextTriggerType.DungeonEnter);
         RenderSession();
+        StartTextRoutine(TextTriggerType.DungeonEnter);
     }
 
     private void EnsureView()
@@ -106,6 +122,7 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
         if (_dungeonView != null)
         {
             EnsureEntityView();
+            EnsureTextView();
             EnsureInputCamera();
             return;
         }
@@ -117,6 +134,7 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
         }
 
         EnsureEntityView();
+        EnsureTextView();
         EnsureInputCamera();
     }
 
@@ -138,6 +156,16 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
         {
             throw new InvalidOperationException("PrototypeDungeonEntityView reference is required.");
         }
+    }
+
+    private void EnsureTextView()
+    {
+        if (_textView != null)
+        {
+            return;
+        }
+
+        _textView = GetComponentInChildren<PrototypeTextView>(true);
     }
 
     private void RenderPlayerEntity()
@@ -248,12 +276,25 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
             _dataManager.TextTriggerBindings.Bindings);
     }
 
-    private void TryDirectText(TextTriggerType? triggerType = null)
+    private void StartTextRoutine(TextTriggerType? triggerType = null)
+    {
+        if (_textRoutine != null)
+        {
+            StopCoroutine(_textRoutine);
+            _textRoutine = null;
+            _isInputBlocked = false;
+        }
+
+        _textRoutine = StartCoroutine(TryDirectTextRoutine(triggerType));
+    }
+
+    private IEnumerator TryDirectTextRoutine(TextTriggerType? triggerType = null)
     {
         EnsureTextSystems();
         if (_textCoordinator == null)
         {
-            return;
+            _textRoutine = null;
+            yield break;
         }
 
         TextObservation observation = BuildTextObservation();
@@ -261,11 +302,25 @@ public sealed class PrototypeDungeonSceneController : MonoBehaviour
         if (selected == null)
         {
             _stepsSinceText++;
-            return;
+            _textRoutine = null;
+            yield break;
         }
 
         LastDirectedText = selected.Text;
         _stepsSinceText = 0;
+        _isInputBlocked = true;
+        try
+        {
+            if (_textView != null)
+            {
+                yield return _textView.AppendTextTypewriter(selected.Text);
+            }
+        }
+        finally
+        {
+            _isInputBlocked = false;
+            _textRoutine = null;
+        }
         Debug.Log($"[TextDirector] {selected.Text}");
     }
 
